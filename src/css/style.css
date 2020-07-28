@@ -1,0 +1,624 @@
+html,
+body {
+  background-image: url("../img/Background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  /* justify-content: center; */
+  height: 100vh;
+  width: 100vw;
+  font-size: 100%;
+  color: #000;
+  background-color: #faf2e7;
+  color: rgb(0, 0, 0);
+  font-family: "AhimsaMed", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1 {
+  padding-left: 40px;
+  font-family: "Ahimsa";
+}
+/* button */
+.kb-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  min-height: 36px;
+  min-width: 88px;
+  line-height: 36px;
+  vertical-align: middle;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  border: 0;
+  padding: 0 6px;
+  margin: 6px 8px;
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-family: FuturaBT-Bold;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+header,
+main,
+footer {
+  min-width: 980px;
+  /*border: 2px solid #000;   */
+  /* margin: 0 auto; */
+}
+
+/* header */
+header {
+  display: flex;
+}
+
+/* main */
+main {
+  flex: 1 1 auto;
+  min-width: 980px;
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.error {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.under {
+  width: 100%;
+  margin-left: 5%;
+  /* max-height: 500px; */
+  /* align-self: center; */
+}
+
+.under h2 {
+  font-weight: 100;
+  font-size: 2em;
+}
+
+.under p {
+  width: 50%;
+  padding-right: 20px;
+}
+
+/* .under p:last-child {
+  padding: 20px 0;
+} */
+.big-note {
+  font-family: "Ahimsa";
+  font-size: 110px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.02;
+  letter-spacing: -0.55px;
+  text-align: left;
+  color: #b97d2c;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.small-note {
+  font-family: "AhimsaMed";
+  font-size: 25px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  margin: 0;
+}
+.top {
+  width: 30%;
+  min-height: 65%;
+  background: #b97d2c;
+  position: absolute;
+  right: 5%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+/* list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  font-size: 16px;
+  line-height: 1.8em;
+  width: 55%;
+}
+
+ul li.ti:before {
+  font-family: "themify";
+  content: "\e600";
+  height: 1px;
+  left: 0;
+  position: relative;
+  bottom: 2px;
+  width: 2px;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+span[class*="ti-"] {
+  font-weight: 700;
+}
+
+/* author content */
+
+.author-cont {
+  order: 0;
+  flex: 0 1 auto;
+  margin: 5px auto;
+}
+
+.author-cont p {
+  text-align: center;
+}
+
+.author-cont ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.author-cont ul li {
+  width: 70%;
+  padding: 5px;
+}
+
+.author-cont ul li a {
+  text-decoration: none;
+}
+
+.author-cont ul li a i {
+  padding-right: 2px;
+}
+
+.tint {
+  color: #303841;
+  font-weight: 700;
+}
+
+/* form */
+form {
+  order: 1;
+  flex: 0 1 auto;
+}
+
+fieldset {
+  margin-top: 20%;
+  background: rgba(255, 255, 255, 0.685);
+  border: 3px outset rgba(235, 241, 199, 0.726);
+}
+
+legend {
+  color: #000;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 5px 6px 4px 5px;
+  /* line-height: 3em; */
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #000 !important;
+}
+#logo {
+  width: 70px;
+  height: 73px;
+}
+#header-text {
+  color: #b97d2c;
+  flex: 0 1 90%;
+}
+#header-image {
+  flex: 1;
+  margin-right: 6.5%;
+}
+
+#fullname {
+  transition: all 0.5s ease;
+  background: #fff url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png)
+    no-repeat;
+  border: 1px solid rgb(200, 200, 200);
+  color: rgb(119, 119, 119);
+  margin: 0 0 10px;
+  padding: 10px 10px 12px 40px;
+  background-position: 5px 9px;
+}
+
+button[value="submit"] {
+  box-shadow: 0px 6px 6.5px 0.5px rgba(0, 0, 0, 0.23);
+  background-color: #ba7d2c;
+  display: block;
+  font-weight: 700;
+  width: 90%;
+}
+
+button[type="submit"]:hover {
+  color: #000;
+}
+
+/* img {
+    width: 100%;
+    max-height: 120px;
+} */
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 7px;
+  width: 94%;
+  padding: 5px;
+  /* margin: 0 auto; */
+}
+
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.btn-input {
+  color: rgb(255, 255, 255);
+  background-color: #ba7d2c;
+  border-color: rgb(29, 129, 209);
+  font-family: FuturaBT-BoldItalic;
+}
+
+.change,
+.delete {
+  padding: 5px;
+}
+
+.change {
+  background: orange;
+  border-color: orange;
+}
+
+.delete {
+  background: red;
+  border-color: red;
+}
+
+.hide {
+  display: none;
+}
+
+/* display picture section */
+
+.dp-container > div {
+  max-width: 400px;
+}
+
+.img-dp {
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img#dp_result {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  border: solid 3px #b97d2c;
+  margin: 25px auto;
+}
+
+.arrow-back {
+  position: absolute;
+  top: 33px;
+  left: 8%;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 30px;
+  color: #ba7d2c;
+}
+
+/* download btn */
+.download-dp:hover {
+  cursor: pointer;
+}
+.download-dp {
+  appearance: button;
+  -moz-appearance: button;
+  -webkit-appearance: button;
+  text-decoration: none;
+  font: menu;
+  display: block;
+  padding: 15px 20px;
+  font-size: 16px;
+  text-align: center;
+  width: 200px;
+  letter-spacing: 0.05rem;
+  margin: 0 auto;
+  border: none;
+  outline: none;
+  box-shadow: 0px 6px 6.5px 0.5px rgba(0, 0, 0, 0.23);
+  background-color: #ba7d2c;
+  color: #fff;
+}
+.share {
+  font-family: "Ahimsa";
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.23;
+  letter-spacing: 1.26px;
+  text-align: center;
+  color: #000000;
+}
+.social-media-handles {
+  display: flex;
+  font-family: "AhimsaReg";
+  font-size: 20.5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3.05;
+  letter-spacing: 0.92px;
+  text-align: center;
+  color: #000000;
+  justify-content: space-around;
+}
+.social-media-handles > div > a {
+  text-decoration: none;
+  color: inherit;
+}
+.social-media-handles > div > a:hover {
+  text-decoration: none;
+  color: #ba7d2c;
+}
+
+/* footer */
+footer {
+  flex: 0 1 auto;
+  align-self: center;
+}
+
+footer p {
+  font-size: 21.5px;
+  text-align: center;
+}
+
+footer .social {
+  color: #03a9f4;
+  text-decoration: none;
+}
+
+.cropit-preview {
+  background-color: #f8f8f8;
+  background-size: cover;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-top: 7px;
+  margin-left: 7px;
+  width: 250px;
+  height: 250px;
+}
+
+.cropit-preview-image-container {
+  cursor: move;
+}
+
+.image-size-label {
+  margin-top: 10px;
+  color: #000;
+  margin-left: 7px;
+}
+
+input {
+  display: block;
+  margin-left: 7px;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+}
+
+#result {
+  margin-top: 10px;
+  width: 900px;
+}
+
+#result-data {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+/******************  RESPONSIVENESS *********************/
+
+@media screen and (max-width: 800px) {
+  html,
+  body {
+    font-size: 12px;
+    margin: 0;
+    padding: 0 0;
+  }
+
+  header,
+  main,
+  footer,
+  .under p,
+  ul li {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  main {
+    min-width: 100%;
+    height: auto;
+    flex-flow: row wrap;
+    overflow-y: scroll;
+  }
+
+  .under,
+  .top {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+  }
+
+  .top {
+    padding: 25px 0;
+    margin-top: 12px;
+  }
+
+  h1,
+  footer p {
+    text-align: center;
+    display: block;
+    padding-left: 30px;
+  }
+
+  .author-cont {
+    order: 1;
+    padding: 0 15px;
+  }
+
+  form {
+    order: 0;
+    width: 80%;
+  }
+
+  .author-cont p,
+  .author-cont ul li a {
+    text-align: center;
+  }
+
+  .arrow-back {
+    top: 16px;
+    left: 3%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body,
+  html,
+  p,
+  a,
+  ul li,
+  .under p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .big-note {
+    font-size: 28px !important;
+  }
+
+  .under p {
+    margin-left: 2%;
+    text-align: center;
+    margin-right: 4%;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .under h2 {
+    font-size: 1.5em;
+  }
+
+  .under p:last-child {
+    padding: 12px 0;
+    line-height: 1.5;
+  }
+
+  .arrow-back {
+    top: 5px;
+    left: 3%;
+  }
+}
+.name {
+  font-family: "Caveat", cursive;
+}
+/* Ahimsa */
+/* regular version */
+@font-face {
+  font-family: "AhimsaReg";
+  src: url("../fonts/Ahimsa/Ahimsa\ Regular.ttf");
+  font-weight: normal;
+}
+/* medium version */
+@font-face {
+  font-family: "AhimsaMed";
+  src: url("../fonts/Ahimsa/Ahimsa\ Medium.ttf");
+  font-weight: 500;
+}
+/* bold version */
+@font-face {
+  font-family: "Ahimsa";
+  src: url("../fonts/Ahimsa/Ahimsa_Bold.ttf");
+  font-weight: bold;
+}
+
+/* Futura */
+/* Bold */
+@font-face {
+  font-family: "FuturaBT-Bold";
+  src: url("../fonts/Futura/FuturaBTBold.ttf");
+}
+/* Bold Italic */
+@font-face {
+  font-family: "FuturaBT-BoldItalic";
+  src: url("../fonts/Futura/FuturaBTItalic.ttf");
+}

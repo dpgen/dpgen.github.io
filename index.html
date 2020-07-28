@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BECON 2020 DP</title>
+    <link
+      rel="stylesheet"
+      src="//normalize-css.googlecode.com/svn/trunk/normalize.css"
+    />
+    <link rel="stylesheet" type="text/css" href="src/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="src/fonts/themify-icons.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Caveat"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="header-text">
+        <h1>
+          #BECON 2020
+        </h1>
+      </div>
+      <div id="header-image">
+        <img id="logo" src="./src/img/logo.png" alt="Egfm Logo" />
+      </div>
+    </header>
+
+    <main>
+      <section class="under">
+        <p class="big-note">Generate your personalized BECON DP!</p>
+        <p class="small-note">
+          Tell your friends that BECON 2020 registration has started.<br />
+          Share far and wide
+        </p>
+      </section>
+
+      <section class="top">
+        <form
+          enctype="multipart/form-data"
+          action=""
+          method="POST"
+          onsubmit="event.preventDefault();"
+        >
+          <fieldset>
+            <div class="form-control">
+              <input
+                placeholder="name"
+                required=""
+                id="fullname"
+                name="fullname"
+                type="text"
+                maxlength="15"
+              />
+            </div>
+            <div class="image-editor">
+              <!-- <input type="file" class="cropit-image-input"> -->
+              <span class="btn btn-input fileinput-button">
+                <i class="ti-camera"></i>
+                <span>Choose an image...</span>
+                <input
+                  id="file"
+                  name="file"
+                  type="file"
+                  class="cropit-image-input"
+                  required=""
+                />
+                <input
+                  type="hidden"
+                  name="image-data"
+                  class="hidden-image-data"
+                />
+              </span>
+              <div class="form-control">
+                <button type="reset" class="btn btn-input change hide">
+                  <i class="ti-image"></i>
+                  <span>Change Image</span>
+                </button>
+                <button type="button" class="btn btn-input delete hide">
+                  <i class="ti-cancel"></i>
+                  <span>Remove</span>
+                </button>
+              </div>
+              <div class="cropit-preview"></div>
+              <div class="image-size-label">
+                Resize image
+              </div>
+              <input type="range" class="cropit-image-zoom-input" />
+              <input
+                type="hidden"
+                name="image-data"
+                class="hidden-image-data"
+              />
+            </div>
+
+            <div class="button">
+              <button value="submit" type="submit" class="kb-button create-dp">
+                Create your own DP
+              </button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; EGFM Registration Unit</p>
+    </footer>
+
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/jquery.cropit.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
