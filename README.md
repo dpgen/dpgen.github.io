@@ -32,9 +32,9 @@
 
 - Open your command prompt and clone the repository by running
 
-`git clone https://github.com/geektutor/dp.git`
+`git clone https://github.com/dpgen/dpgen.github.io.git`
 
-- Copy the folder to your **WAMP** www root or **XAMPP** htdots or run php -S 127.0.0.1:1000 from your folder in your terminal
+- Copy the folder to your **WAMP** www root or **XAMPP** htdocs or run php -S 127.0.0.1:1000 from your folder in your terminal
 - Then run in a browser
 
 ---
@@ -45,6 +45,6 @@ The jQuery CropIt plugin was used for image upload. The inherent resize feature 
 
 JavaScript was used to place the uploaded image on top of a base frame, and export the resulting composite image to jpeg format. The base frame is a 1200 x 1200 picture. The alloted space for uploaded image is 800 x 800.
 
-The naming style for the image is set on line 38, you can edit the `ECX_DP_` to suit your needs.
+The naming style for the image is set on line 38, you can edit the `BECON_DP_` to suit your needs.
 
 You can set the height and width of the uploaded image in the createDP function on line 92.
