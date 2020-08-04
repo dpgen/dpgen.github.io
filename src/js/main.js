@@ -81,7 +81,7 @@ $(function () {
     // x, y, width, height
     const picData = [301.8, 197.1, 471.1, 507.6];
     // name, y, x
-    const nameData = [username, 826, 40];
+    const nameData = [username, 823, 43];
 
     createDP(username, imageData, picData, nameData, function (url) {
       navigateTo("yourdp", createHTMLForImage(url));
@@ -263,10 +263,10 @@ $(function () {
       //Write user name
       ctx.textBaseline = "top";
       ctx.textAlign = "left";
-      ctx.font = "40px Montserrat-Bold";
+      ctx.font = "42px Montserrat-Bold";
       ctx.fillStyle = "#ffffff";
       var canvasText = name[0];
-      ctx.renderText(canvasText, name[2], name[1]);
+      ctx.renderText(canvasText, name[2], name[1], 0);
 
       //Write Days to go
       ctx.font = "50px Montserrat-Bold";
