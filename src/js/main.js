@@ -55,7 +55,11 @@ $(function () {
     main.html(createErrorHtml());
   } else {
     queryName.trim();
-    $("#fullname").val(queryName);
+    if (queryName.length <= 15) {
+      $("#fullname").val(queryName);
+    } else {
+      $("#fullname").val("");
+    }
     main.css("display", "flex");
   }
 
@@ -75,9 +79,9 @@ $(function () {
     button.attr("disabled", "disabled").html("...processing");
 
     // x, y, width, height
-    const picData = [52, 208, 478, 515];
+    const picData = [301.8, 197.1, 471.1, 507.6];
     // name, y, x
-    const nameData = [username, 432, 558];
+    const nameData = [username, 826, 40];
 
     createDP(username, imageData, picData, nameData, function (url) {
       navigateTo("yourdp", createHTMLForImage(url));
@@ -259,22 +263,22 @@ $(function () {
       //Write user name
       ctx.textBaseline = "top";
       ctx.textAlign = "left";
-      ctx.font = "50px FuturaBT-Bold";
-      ctx.fillStyle = "#b97d2c";
+      ctx.font = "40px Montserrat-Bold";
+      ctx.fillStyle = "#ffffff";
       var canvasText = name[0];
-      ctx.renderText(canvasText, name[2], name[1], -0.25);
+      ctx.renderText(canvasText, name[2], name[1]);
 
       //Write Days to go
-      ctx.font = "50px FuturaBT-BoldItalic";
-      ctx.fillStyle = "#bd0202";
+      ctx.font = "50px Montserrat-Bold";
+      ctx.fillStyle = "#f5f5f5";
       if (daysToGo == 1) {
-        canvasText = "1 DAY";
+        canvasText = "1 day";
       } else {
-        canvasText = `${daysToGo} DAYS`;
+        canvasText = `${daysToGo} days`;
       }
-      ctx.renderText(canvasText, 440, 972, -0.25);
-      canvasText = "TO GO!";
-      ctx.renderText(canvasText, 450, 1020, -0.25);
+      ctx.renderText(canvasText, 67, 62, -0.25);
+      canvasText = "to go!";
+      ctx.renderText(canvasText, 81, 102, -0.25);
 
       cb(canvas.toDataURL("image/jpeg", 1.0));
     }

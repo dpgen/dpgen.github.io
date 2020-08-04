@@ -57,7 +57,7 @@ h1 {
   font-size: 14px;
   font-style: inherit;
   font-variant: inherit;
-  font-family: FuturaBT-Bold;
+  font-family: Montserrat-Bold;
   text-decoration: none;
   overflow: hidden;
   -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
@@ -311,7 +311,7 @@ button[type="submit"]:hover {
   color: rgb(255, 255, 255);
   background-color: #ba7d2c;
   border-color: rgb(29, 129, 209);
-  font-family: FuturaBT-BoldItalic;
+  font-family: Montserrat-Bold;
 }
 
 .change,
@@ -611,14 +611,21 @@ button[type="submit"] {
   font-weight: bold;
 }
 
-/* Futura */
+/* Montserrat */
 /* Bold */
 @font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+/* Futura */
+/* Bold */
+/* @font-face {
   font-family: "FuturaBT-Bold";
   src: url("../fonts/Futura/FuturaBTBold.ttf");
-}
+} */
 /* Bold Italic */
-@font-face {
+/* @font-face {
   font-family: "FuturaBT-BoldItalic";
   src: url("../fonts/Futura/FuturaBTItalic.ttf");
-}
+} */
