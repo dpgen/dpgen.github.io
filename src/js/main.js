@@ -48,20 +48,21 @@ $(function () {
   const main = $("main");
   const mainContent = main.innerHTML;
 
-  var queryName = getUrlParameter("name");
-  var requestKey = getUrlParameter("requestKey");
-  if (isEmptyOrSpaces(queryName) || isEmptyOrSpaces(requestKey)) {
-    main.css("display", "flex");
-    main.html(createErrorHtml());
-  } else {
-    queryName.trim();
-    if (queryName.length <= 15) {
-      $("#fullname").val(queryName);
-    } else {
-      $("#fullname").val("");
-    }
-    main.css("display", "flex");
-  }
+  // var queryName = getUrlParameter("name");
+  // var requestKey = getUrlParameter("requestKey");
+  // if (isEmptyOrSpaces(queryName) || isEmptyOrSpaces(requestKey)) {
+  //   main.css("display", "flex");
+  //   main.html(createErrorHtml());
+  // } else {
+  //   queryName.trim();
+  //   if (queryName.length <= 15) {
+  //     $("#fullname").val(queryName);
+  //   } else {
+  //     $("#fullname").val("");
+  //   }
+  //   main.css("display", "flex");
+  // }
+  main.css("display", "flex");
 
   $(".image-editor").cropit();
 
@@ -91,41 +92,15 @@ $(function () {
         headerText.innerHTML = "";
         return `
           <section class="dp-container">
-            <a href="?name=${queryName}&requestKey=${requestKey}" class="arrow-back"><i class="ti-arrow-left"></i> Back</a>
+            <a href="?" class="arrow-back"><i class="ti-arrow-left"></i> Back</a>
             <div class="img-dp">
               <img id="dp_result" src=${url} title="Your DP"/>
               <br>
-              <a id="asd" class="download-dp">Download Image</a>
+              <a class="download-dp" href="${url}" download="INVITE_${username.replace(/\./g, "")}">Download Image</a>
               <br>
             </div>
             
-              <p class="share">Don't forget to share the good news</p>
-            
-           <!-- <div class="social-media-handles">
-              <div>
-                <a href="www.facebook.com"><p>Facebook</p></a>
-              </div>
-              <div>
-                <a href="www.instagram.com"><p>Instagram</p></a>
-              </div>
-              <div>
-                <a href="www.twitter.com"><p>Twitter</p></a>
-              </div>
-            </div> -->
-            <script>
-              document.getElementById('asd').onclick = function name() {
-                downloadImage("${url}", "BECON_DP_${username}");
-              }
-              function downloadImage(inUrl, inName) {
-                console.log("reached");
-               var w = window.open("");
-               var link = w.document.createElement("a");
-               link.download = inName;
-               link.href = inUrl;
-               link.click();
-               location.replace("https://egfm.org/becon")
-              }
-            </script>
+            <p class="share">Don't forget to share the good news</p>
           </section>
         `;
       }
