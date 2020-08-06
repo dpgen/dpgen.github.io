@@ -244,16 +244,18 @@ $(function () {
       ctx.renderText(canvasText, name[2], name[1], 0);
 
       //Write Days to go
-      ctx.font = "50px Montserrat-Bold";
-      ctx.fillStyle = "#f5f5f5";
-      if (daysToGo == 1) {
-        canvasText = "1 day";
-      } else {
-        canvasText = `${daysToGo} days`;
+      if (daysToGo > 0) {
+        ctx.font = "50px Montserrat-Bold";
+        ctx.fillStyle = "#f5f5f5";
+        if (daysToGo == 1) {
+          canvasText = "1 day";
+        } else {
+          canvasText = `${daysToGo} days`;
+        }
+        ctx.renderText(canvasText, 67, 62, -0.25);
+        canvasText = "to go!";
+        ctx.renderText(canvasText, 81, 102, -0.25);
       }
-      ctx.renderText(canvasText, 67, 62, -0.25);
-      canvasText = "to go!";
-      ctx.renderText(canvasText, 81, 102, -0.25);
 
       cb(canvas.toDataURL("image/jpeg", 1.0));
     }
