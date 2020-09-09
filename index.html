@@ -7,12 +7,12 @@
       content="width=device-width,initial-scale=1,user-scalable=0"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>BECON 2020 DP</title>
+    <title>Singlz Summit DP Generator</title>
     <link
       rel="stylesheet"
       src="//normalize-css.googlecode.com/svn/trunk/normalize.css"
     />
-    <link rel="stylesheet" type="text/css" href="src/css/style.css?v=1.1" />
+    <link rel="stylesheet" type="text/css" href="src/css/style.css?v=1.0" />
     <link rel="stylesheet" type="text/css" href="src/fonts/themify-icons.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
@@ -25,46 +25,99 @@
   </head>
   <body>
     <header>
-      <div id="header-text">
-        <h1>
-          #BECON 2020
-        </h1>
-      </div>
       <div id="header-image">
-        <img id="logo" src="./src/img/logo.png" alt="Egfm Logo" />
+        <img id="logo" src="./src/img/logo.png" alt="Singlz Summit Logo" />
+      </div>
+      <div id="header-text">
+        <h1 style="font-family: SmoothStone-Regular">#SinglzSummit20</h1>
       </div>
     </header>
-
     <main>
       <section class="under">
-        <p class="big-note">Generate your personalized BECON DP!</p>
-        <p class="small-note">
-          Tell your friends that BECON 2020 registration has started.<br />
-          Share far and wide
+        <p class="under-title">
+          Generate your <br />personal Singlz Summit DP!
         </p>
+        <p class="sub-title">
+          it's 100% Easy and it Generates <strong>Automatically.</strong>
+        </p>
+        <div class="hidden">
+          <div>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
       </section>
 
-      <section class="top">
+      <section class="card-u">
         <form
           enctype="multipart/form-data"
           action=""
           method="POST"
           onsubmit="event.preventDefault();"
         >
-          <fieldset>
-            <div class="form-control">
+          <div class="card-container">
+            <div class="form-container" style="margin-top: 8%">
               <input
-                placeholder="name"
-                required=""
-                id="fullname"
-                name="fullname"
                 type="text"
-                maxlength="15"
+                id="fullname"
+                class="form-control2"
+                placeholder="Name (Compulsory)"
+                style="margin-bottom: 10%"
+                required
+                maxlength="30"
               />
+              <span class="input-field_helper hidden">Name</span>
             </div>
             <div class="image-editor">
               <!-- <input type="file" class="cropit-image-input"> -->
-              <span class="btn btn-input fileinput-button">
+              <span
+                class="btn btn-input fileinput-button"
+                style="cursor: pointer"
+              >
                 <i class="ti-camera"></i>
                 <span>Choose an image...</span>
                 <input
@@ -74,50 +127,55 @@
                   class="cropit-image-input"
                   required=""
                 />
+                <!-- <input
+                  type="hidden"
+                  name="image-data"
+                  class="hidden-image-data"
+                /> -->
+              </span>
+              <div>
+                <span
+                  type="reset"
+                  class="btn-input change hide"
+                  style="cursor: pointer"
+                >
+                  <i class="ti-image"></i>
+                  <span>Change Image</span>
+                </span>
+              </div>
+              <div class="">
+                <div class="cropit-preview"></div>
+
+                <div class="image-size-label">Resize image</div>
+                <input
+                  type="range"
+                  class="cropit-image-zoom-input"
+                  style="margin-left: 20%"
+                />
+
                 <input
                   type="hidden"
                   name="image-data"
                   class="hidden-image-data"
                 />
-              </span>
-              <div class="form-control">
-                <button type="reset" class="btn btn-input change hide">
-                  <i class="ti-image"></i>
-                  <span>Change Image</span>
-                </button>
-                <button type="button" class="btn btn-input delete hide">
-                  <i class="ti-cancel"></i>
-                  <span>Remove</span>
-                </button>
               </div>
-              <div class="cropit-preview"></div>
-              <div class="image-size-label">
-                Resize image
-              </div>
-              <input type="range" class="cropit-image-zoom-input" />
-              <input
-                type="hidden"
-                name="image-data"
-                class="hidden-image-data"
-              />
-            </div>
 
-            <div class="button">
-              <button value="submit" type="submit" class="kb-button create-dp">
-                Create your own DP
+              <button
+                value="submit"
+                type="submit"
+                class="kb-button create-dp"
+                style="margin-left: 20%; margin-top: 10%; margin-bottom: 10%"
+              >
+                Generate DP
               </button>
             </div>
-          </fieldset>
+          </div>
         </form>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; EGFM Registration Unit</p>
-    </footer>
-
     <script src="src/js/jquery.min.js"></script>
     <script src="src/js/jquery.cropit.js"></script>
-    <script src="src/js/main.js?v=1.1.0"></script>
+    <script src="src/js/main.js?v=1.0"></script>
   </body>
 </html>

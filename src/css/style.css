@@ -1,6 +1,5 @@
 html,
 body {
-  background-image: url("../img/Background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -11,9 +10,8 @@ body {
   width: 100vw;
   font-size: 100%;
   color: #000;
-  background-color: #faf2e7;
   color: rgb(0, 0, 0);
-  font-family: "AhimsaMed", sans-serif;
+  font-family: "FuturaBTMedium", sans-serif;
 }
 
 * {
@@ -23,7 +21,7 @@ body {
 
 h1 {
   padding-left: 40px;
-  font-family: "Ahimsa";
+  font-family: "FuturaBTBold";
 }
 /* button */
 .kb-button {
@@ -39,7 +37,7 @@ h1 {
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 6px;
   box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -53,11 +51,11 @@ h1 {
   color: #fff;
   white-space: nowrap;
   text-transform: uppercase;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 300;
+  font-size: 12px;
   font-style: inherit;
   font-variant: inherit;
-  font-family: Montserrat-Bold;
+  font-family: Muli-ExtraBold;
   text-decoration: none;
   overflow: hidden;
   -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
@@ -77,6 +75,7 @@ footer {
 /* header */
 header {
   display: flex;
+  flex-direction: row;
 }
 
 /* main */
@@ -116,7 +115,7 @@ main {
   padding: 20px 0;
 } */
 .big-note {
-  font-family: "Ahimsa";
+  font-family: "FuturaBTBold";
   font-size: 110px;
   font-weight: bold;
   font-stretch: normal;
@@ -124,12 +123,12 @@ main {
   line-height: 1.02;
   letter-spacing: -0.55px;
   text-align: left;
-  color: #b97d2c;
+  color: #020235;
   margin-top: 5%;
   margin-bottom: 2%;
 }
 .small-note {
-  font-family: "AhimsaMed";
+  font-family: "FuturaBTMedium";
   font-size: 25px;
   font-weight: 500;
   font-stretch: normal;
@@ -143,12 +142,25 @@ main {
 .top {
   width: 30%;
   min-height: 65%;
-  background: #b97d2c;
+  /* background: #b97d2c;*/
   position: absolute;
   right: 5%;
-  display: flex;
+  /*display: flex;*/
   flex-flow: column;
   align-items: center;
+}
+.card-u {
+  position: absolute;
+  width: 35%;
+  right: 5%;
+  min-height: 65%;
+  overflow: auto;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 8px 10px 20px 0 rgba(0, 0, 0, 0.22);
+  margin-bottom: 20px;
+  padding: 0px 0px 0px;
 }
 
 /* list */
@@ -224,8 +236,8 @@ form {
 
 fieldset {
   margin-top: 20%;
-  background: rgba(255, 255, 255, 0.685);
-  border: 3px outset rgba(235, 241, 199, 0.726);
+  background: #0202358c;
+  border: 3px outset #020235;
 }
 
 legend {
@@ -233,53 +245,133 @@ legend {
   font-size: 25px;
   font-weight: bold;
 }
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  background-color: #51156c;
+  border-radius: 50%;
+  display: inline-block;
+}
 
 .form-control {
   width: 100%;
   padding: 5px 6px 4px 5px;
   /* line-height: 3em; */
 }
+.form-container {
+  align-items: center;
+}
 
-.form-control input {
-  width: 100%;
+.form-control2 input {
+  width: 80%;
   padding: 10px;
   font-size: 16px;
+
   color: #000 !important;
+}
+.form-control2 {
+  margin-left: 10%;
+  background-color: #ffffff;
+  width: 80%;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  -webkit-appearance: none;
+  color: #2c2c2c;
+  outline: 0;
+  height: 50px;
+  border-radius: 10px;
+  padding: 9px 12px;
+  line-height: normal;
+  font-size: 14px;
+  font-weight: normal;
+  vertical-align: middle;
+  min-height: 35px;
+  -webkit-transition: all 0.12s ease;
+  transition: all 0.12s ease;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-transition: background 0.2s linear 0s;
+  transition: background 0.2s linear 0s;
+}
+.form-control2:hover {
+  border-color: #020235;
+  outline: none;
+}
+.input-field_helper {
+  font-size: 0.9rem;
+  position: absolute;
+  opacity: 0;
+  background-color: #fff;
+  padding-left: 8px;
+  padding-right: 8px;
+  top: 30px;
+  font-weight: 100;
+  color: rgba(10, 46, 101, 0.5);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  left: 60px;
+}
+input[type="text"]:focus + .input-field_helper {
+  color: #020235;
+  opacity: 1 !important;
+}
+input::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 3;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+input[type="text"]:focus {
+  border-color: #020235;
+  outline: none;
+  background-color: transparent;
+  -webkit-transition: border 0.3s ease-in;
+  transition: border 0.3s ease-in;
+  box-shadow: none;
 }
 #logo {
   width: 70px;
   height: 73px;
 }
-#header-text {
-  color: #b97d2c;
-  flex: 0 1 90%;
-}
 #header-image {
   flex: 1;
-  margin-right: 6.5%;
+  /*flex: 0 1 90%;*/
+  margin-left: 6.5%;
+}
+#header-text {
+  margin-right: 15%;
 }
 
-#fullname {
+/* #fullname {
   transition: all 0.5s ease;
   background: #fff url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png)
-    no-repeat;
+  no-repeat;
   border: 1px solid rgb(200, 200, 200);
   color: rgb(119, 119, 119);
   margin: 0 0 10px;
   padding: 10px 10px 12px 40px;
   background-position: 5px 9px;
-}
+} */
 
 button[value="submit"] {
   box-shadow: 0px 6px 6.5px 0.5px rgba(0, 0, 0, 0.23);
-  background-color: #ba7d2c;
+  background-color: #020235;
   display: block;
   font-weight: 700;
-  width: 90%;
+  width: 60%;
 }
 
 button[type="submit"]:hover {
-  color: #000;
+  color: rgb(248, 223, 169);
+  border: 1px solid transparent !important;
 }
 
 /* img {
@@ -308,20 +400,19 @@ button[type="submit"]:hover {
 }
 
 .btn-input {
+  border-radius: 5px;
+
+  width: 50%;
+  margin-left: 20%;
   color: rgb(255, 255, 255);
-  background-color: #ba7d2c;
+  background-color: #020235;
   border-color: rgb(29, 129, 209);
-  font-family: Montserrat-Bold;
+  font-family: Muli-LightItalic;
 }
 
 .change,
 .delete {
   padding: 5px;
-}
-
-.change {
-  background: orange;
-  border-color: orange;
 }
 
 .delete {
@@ -350,18 +441,18 @@ img#dp_result {
   max-width: 100%;
   width: 100%;
   height: 100%;
-  border: solid 3px #b97d2c;
+  border: solid 3px #020235;
   margin: 25px auto;
 }
 
 .arrow-back {
   position: absolute;
   top: 33px;
-  left: 8%;
+  left: 80%;
   text-decoration: none;
   font-weight: 700;
   font-size: 30px;
-  color: #ba7d2c;
+  color: #020235;
 }
 
 /* download btn */
@@ -384,11 +475,11 @@ img#dp_result {
   border: none;
   outline: none;
   box-shadow: 0px 6px 6.5px 0.5px rgba(0, 0, 0, 0.23);
-  background-color: #ba7d2c;
+  background-color: #020235;
   color: #fff;
 }
 .share {
-  font-family: "Ahimsa";
+  font-family: "FuturaBTBold";
   font-size: 28px;
   font-weight: bold;
   font-stretch: normal;
@@ -400,7 +491,7 @@ img#dp_result {
 }
 .social-media-handles {
   display: flex;
-  font-family: "AhimsaReg";
+  font-family: "FuturaBTMedium";
   font-size: 20.5px;
   font-weight: normal;
   font-stretch: normal;
@@ -417,7 +508,7 @@ img#dp_result {
 }
 .social-media-handles > div > a:hover {
   text-decoration: none;
-  color: #ba7d2c;
+  color: #020235;
 }
 
 /* footer */
@@ -435,15 +526,22 @@ footer .social {
   color: #03a9f4;
   text-decoration: none;
 }
-
+.under-title {
+  font-size: 45px;
+  color: #020235;
+  font-family: FuturaBTBold;
+}
+.sub-title {
+  font-weight: 100;
+}
 .cropit-preview {
-  background-color: #f8f8f8;
   background-size: cover;
-  border: 1px solid #ccc;
+  border: 1px #ccc;
+  border: dashed 1px;
   border-radius: 3px;
   margin-top: 7px;
-  margin-left: 7px;
-  width: 250px;
+  width: 248px;
+  margin-left: 20%;
   height: 250px;
 }
 
@@ -454,12 +552,11 @@ footer .social {
 .image-size-label {
   margin-top: 10px;
   color: #000;
-  margin-left: 7px;
+  margin-left: 20%;
 }
 
 input {
   display: block;
-  margin-left: 7px;
 }
 
 button[type="submit"] {
@@ -504,16 +601,29 @@ button[type="submit"] {
     flex-flow: row wrap;
     overflow-y: scroll;
   }
+  .btn-input {
+    width: 80%;
+  }
 
+  .hidden {
+    display: none;
+  }
   .under,
-  .top {
+  .card-u {
     position: relative;
-    width: 100%;
-    margin: 0 auto;
+    width: 70%;
+
     top: 0;
     left: 0;
     right: 0;
     bottom: 20px;
+  }
+  .under-title {
+    font-size: 40px;
+    color: #020235;
+  }
+  .form-control2 {
+    width: 100%;
   }
 
   .top {
@@ -542,10 +652,14 @@ button[type="submit"] {
   .author-cont ul li a {
     text-align: center;
   }
-
+  .cropit-preview {
+    width: 260px;
+    height: 263px;
+    margin-left: 5%;
+  }
   .arrow-back {
     top: 16px;
-    left: 3%;
+    left: 70%;
   }
 }
 
@@ -559,11 +673,17 @@ button[type="submit"] {
     font-size: 13px;
     line-height: 1.5;
   }
-
+  .hidden {
+    display: none;
+  }
   .big-note {
     font-size: 28px !important;
   }
-
+  .cropit-preview {
+    width: 225px;
+    height: 228px;
+    margin-left: 5%;
+  }
   .under p {
     margin-left: 2%;
     text-align: center;
@@ -585,7 +705,7 @@ button[type="submit"] {
 
   .arrow-back {
     top: 5px;
-    left: 3%;
+    left: 70%;
   }
 }
 .name {
@@ -613,19 +733,50 @@ button[type="submit"] {
 
 /* Montserrat */
 /* Bold */
-@font-face {
+/* @font-face {
   font-family: "Montserrat-Bold";
   src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+} */
+
+/* Muli */
+/* Bold */
+@font-face {
+  font-family: "Muli-ExtraBold";
+  src: url("../fonts/Muli/Muli-ExtraBold.ttf");
+}
+/* light Italic */
+@font-face {
+  font-family: "Muli-LightItalic";
+  src: url("../fonts/Muli/Muli-LightItalic.ttf");
+}
+
+/* Muli */
+/* Bold */
+@font-face {
+  font-family: "Muli-ExtraBold";
+  src: url("../fonts/Muli/Muli-ExtraBold.ttf");
+}
+/* light Italic */
+@font-face {
+  font-family: "Muli-LightItalic";
+  src: url("../fonts/Muli/Muli-LightItalic.ttf");
 }
 
 /* Futura */
 /* Bold */
-/* @font-face {
-  font-family: "FuturaBT-Bold";
+@font-face {
+  font-family: "FuturaBTBold";
   src: url("../fonts/Futura/FuturaBTBold.ttf");
-} */
-/* Bold Italic */
-/* @font-face {
-  font-family: "FuturaBT-BoldItalic";
-  src: url("../fonts/Futura/FuturaBTItalic.ttf");
-} */
+}
+/* regular */
+@font-face {
+  font-family: "FuturaBTMedium";
+  src: url("../fonts/Futura/FuturaBTMedium.ttf");
+}
+
+/* SmoothStone */
+/* Regular */
+@font-face {
+  font-family: "SmoothStone-Regular";
+  src: url("../fonts/SmoothStone/SmoothStone-Regular.ttf");
+}

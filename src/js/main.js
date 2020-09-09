@@ -43,7 +43,6 @@ $(function () {
   const fileInput = $("input[type=file]");
   const preview = $("img");
   const changebtn = $(".change");
-  const deletebtn = $(".delete");
   const fileInpbtn = $(".fileinput-button");
   const main = $("main");
   const mainContent = main.innerHTML;
@@ -60,7 +59,6 @@ $(function () {
   //   } else {
   //     $("#fullname").val("");
   //   }
-  //   main.css("display", "flex");
   // }
   main.css("display", "flex");
 
@@ -69,6 +67,7 @@ $(function () {
   $("form").submit(function (e) {
     e.preventDefault();
     var username = $("#fullname").val();
+    // var ministryName = $("#ministry").val();
     // Move cropped image data to hidden input
     var imageData = $(".image-editor").cropit("export", {
       type: "image/jpeg",
@@ -80,9 +79,10 @@ $(function () {
     button.attr("disabled", "disabled").html("...processing");
 
     // x, y, width, height
-    const picData = [301.8, 197.1, 471.1, 507.6];
+    const picData = [680, 74, 912, 921];
     // name, y, x
-    const nameData = [username, 823, 43];
+    const nameData = [username, 1260, 680];
+    // const nameData = [username + ",", 1295, 685, ministryName];
 
     createDP(username, imageData, picData, nameData, function (url) {
       navigateTo("yourdp", createHTMLForImage(url));
@@ -96,7 +96,7 @@ $(function () {
             <div class="img-dp">
               <img id="dp_result" src=${url} title="Your DP"/>
               <br>
-              <a class="download-dp" href="${url}" download="INVITE_${username.replace(/\./g, "")}">Download Image</a>
+              <a class="download-dp" href="${url}" download="SS_DP_${username.replace(/\./g, "")}">Download Image</a>
               <br>
             </div>
             
@@ -110,7 +110,6 @@ $(function () {
   fileInput.on("change", function (e) {
     fileInpbtn.css({ display: "none" });
     changebtn.css({ display: "inline-block" });
-    deletebtn.css({ display: "inline-block" });
   });
 
   /* change image btn */
@@ -119,16 +118,16 @@ $(function () {
   });
 
   /* remove image btn */
-  deletebtn.on("click", function () {
-    let file = document.querySelector("input[type=file]").files[0];
-    file.value = null;
+  // deletebtn.on("click", function () {
+  //   let file = document.querySelector("input[type=file]").files[0];
+  //   file.value = null;
 
-    fileInpbtn.css({ display: "inline-block" });
-    changebtn.css({ display: "none" });
-    deletebtn.css({ display: "none" });
+  //   fileInpbtn.css({ display: "inline-block" });
+  //   changebtn.css({ display: "none" });
+  //   deletebtn.css({ display: "none" });
 
-    $(".cropit-preview-image").attr("src", "");
-  });
+  //   $(".cropit-preview-image").attr("src", "");
+  // });
 
   function b64toBlob(b64Data, contentType, sliceSize) {
     contentType = contentType || "";
@@ -238,24 +237,10 @@ $(function () {
       //Write user name
       ctx.textBaseline = "top";
       ctx.textAlign = "left";
-      ctx.font = "42px Montserrat-Bold";
-      ctx.fillStyle = "#ffffff";
+      ctx.font = "68px SmoothStone-Regular";
+      ctx.fillStyle = "#727678";
       var canvasText = name[0];
-      ctx.renderText(canvasText, name[2], name[1], 0);
-
-      //Write Days to go
-      if (daysToGo > 0) {
-        ctx.font = "50px Montserrat-Bold";
-        ctx.fillStyle = "#f5f5f5";
-        if (daysToGo == 1) {
-          canvasText = "1 day";
-        } else {
-          canvasText = `${daysToGo} days`;
-        }
-        ctx.renderText(canvasText, 67, 62, -0.25);
-        canvasText = "to go!";
-        ctx.renderText(canvasText, 81, 102, -0.25);
-      }
+      ctx.renderText(canvasText, name[2], name[1], 1);
 
       cb(canvas.toDataURL("image/jpeg", 1.0));
     }
