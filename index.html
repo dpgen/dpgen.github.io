@@ -12,7 +12,7 @@
       rel="stylesheet"
       src="//normalize-css.googlecode.com/svn/trunk/normalize.css"
     />
-    <link rel="stylesheet" type="text/css" href="src/css/style.css?v=1.0" />
+    <link rel="stylesheet" type="text/css" href="src/css/style.css?v=1.7" />
     <link rel="stylesheet" type="text/css" href="src/fonts/themify-icons.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
@@ -29,7 +29,7 @@
         <img id="logo" src="./src/img/ssLogo.png" alt="Singlz Summit Logo" />
       </div>
       <div id="header-text">
-        <h1 style="font-family: SmoothStone-Regular">#SinglzSummit20</h1>
+        <h1 style="font-family: Autography">#SinglzSummit20</h1>
       </div>
     </header>
     <main>
@@ -105,12 +105,19 @@
                 type="text"
                 id="fullname"
                 class="form-control2"
-                placeholder="Name (Compulsory)"
-                style="margin-bottom: 10%"
+                placeholder="Name"
                 required
-                maxlength="30"
+                maxlength="15"
               />
               <span class="input-field_helper hidden">Name</span>
+              <textarea
+                id="testimony"
+                class="form-control2"
+                style="margin-top: 5%; margin-bottom: 10%"
+                placeholder="Testimony"
+                maxlength="70"
+                required
+              ></textarea>
             </div>
             <div class="image-editor">
               <!-- <input type="file" class="cropit-image-input"> -->
@@ -176,6 +183,6 @@
 
     <script src="src/js/jquery.min.js"></script>
     <script src="src/js/jquery.cropit.js"></script>
-    <script src="src/js/main.js?v=1.0"></script>
+    <script src="src/js/main.js?v=1.7"></script>
   </body>
 </html>

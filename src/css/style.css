@@ -55,7 +55,7 @@ h1 {
   font-size: 12px;
   font-style: inherit;
   font-variant: inherit;
-  font-family: Muli-ExtraBold;
+  font-family: Poppins-SemiBold;
   text-decoration: none;
   overflow: hidden;
   -webkit-transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
@@ -407,7 +407,7 @@ button[type="submit"]:hover {
   color: rgb(255, 255, 255);
   background-color: #020235;
   border-color: rgb(29, 129, 209);
-  font-family: Muli-LightItalic;
+  font-family: Poppins-SemiBold;
 }
 
 .change,
@@ -540,7 +540,7 @@ footer .social {
   border: dashed 1px;
   border-radius: 3px;
   margin-top: 7px;
-  width: 248px;
+  width: 224px;
   margin-left: 20%;
   height: 250px;
 }
@@ -654,7 +654,7 @@ button[type="submit"] {
   }
   .cropit-preview {
     width: 260px;
-    height: 263px;
+    height: 291px;
     margin-left: 5%;
   }
   .arrow-back {
@@ -681,7 +681,7 @@ button[type="submit"] {
   }
   .cropit-preview {
     width: 225px;
-    height: 228px;
+    height: 252px;
     margin-left: 5%;
   }
   .under p {
@@ -779,4 +779,18 @@ button[type="submit"] {
 @font-face {
   font-family: "SmoothStone-Regular";
   src: url("../fonts/SmoothStone/SmoothStone-Regular.ttf");
+}
+
+/* SmoothStone */
+/* Regular */
+@font-face {
+  font-family: "Autography";
+  src: url("../fonts/autography/Autography.otf");
+}
+
+/* SmoothStone */
+/* Regular */
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
 }
