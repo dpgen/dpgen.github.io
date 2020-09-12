@@ -110,11 +110,22 @@
                 maxlength="15"
               />
               <span class="input-field_helper hidden">Name</span>
+              <p
+                style="
+                  float: right;
+                  margin-top: 5%;
+                  margin-bottom: 0;
+                  margin-right: 15%;
+                  color: grey;
+                "
+              >
+                <span id="counter">0</span> of 70
+              </p>
               <textarea
                 id="testimony"
                 class="form-control2"
-                style="margin-top: 5%; margin-bottom: 10%"
-                placeholder="Testimony"
+                style="margin-bottom: 10%"
+                placeholder="Why should your friends attend singlz summit?"
                 maxlength="70"
                 required
               ></textarea>
@@ -184,5 +195,20 @@
     <script src="src/js/jquery.min.js"></script>
     <script src="src/js/jquery.cropit.js"></script>
     <script src="src/js/main.js?v=1.7"></script>
+    <script>
+      const textarea = document.getElementById("testimony");
+
+      textarea.addEventListener("input", (event) => {
+        const target = event.currentTarget;
+        const charLen = target.value.length;
+        const counter = document.getElementById("counter");
+        counter.innerText = charLen;
+      });
+      // function updateCounter() {
+      //   let textArea = document.getElementById("testimony");
+      //   let counter = document.getElementById("counter");
+      //   console.log(textArea.value.length);
+      // }
+    </script>
   </body>
 </html>
